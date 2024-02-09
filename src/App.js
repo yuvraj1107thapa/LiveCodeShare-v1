@@ -1,13 +1,15 @@
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from 'react';
+import Home from './pages/Home';
+import Editor from './component/CodeEditor';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        Hello
-      </header>
+    <div>
+      <Router>
+        <Route exact path="/" component={Home} />
+      </Router>
     </div>
   );
-}
-
+};
 export default App;
